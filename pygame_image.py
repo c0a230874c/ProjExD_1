@@ -19,13 +19,14 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
+        img_rct.move_ip((-1,0)) #演習1
         key_list = pg.key.get_pressed() #練習8
         if key_list[pg.K_UP]: #上移動
             img_rct.move_ip((0, -1)) 
         if key_list[pg.K_DOWN]: #下移動
             img_rct.move_ip((0, 1)) 
         if key_list[pg.K_RIGHT]: #右移動
-            img_rct.move_ip((1, 0)) 
+            img_rct.move_ip((2, 0)) #演習1
         if key_list[pg.K_LEFT]: #左移動
             img_rct.move_ip((-1,0)) 
         x = -(tmr%3200) #練習7
